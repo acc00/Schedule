@@ -29,7 +29,7 @@
                     android:layout_weight="1"
                     android:text="当前日期："
                     android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/schedule_date"
@@ -37,13 +37,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
+                android:paddingBottom="3dp"
                 android:orientation="horizontal" >
 
                 <TextView
@@ -52,7 +52,7 @@
                     android:layout_weight="1"
                     android:text="日程时间："
                     android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/schedule_time"
@@ -60,13 +60,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="5dp"
+                android:paddingBottom="3dp"
                 android:orientation="horizontal" >
 
                 <TextView
@@ -75,7 +75,7 @@
                     android:layout_weight="1"
                     android:text="提醒间隔："
                     android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:textSize="16sp" />
 
                 <Spinner
                     android:id="@+id/schedule_alarm"
@@ -96,7 +96,7 @@
                     android:layout_weight="1"
                     android:text="日程标题："
                     android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/schedule_title"
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="16sp"
                     android:background="@drawable/editext_selector" />
             </LinearLayout>
 
@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:text="日程内容："
                     android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/schedule_content"
@@ -126,7 +126,7 @@
                     android:layout_height="300dp"
                     android:gravity="left|top"
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="16sp"
                     android:background="@drawable/editext_selector"  />
             </LinearLayout>
         </LinearLayout>

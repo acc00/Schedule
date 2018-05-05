@@ -76,12 +76,17 @@ public class ScheduleFragment extends Fragment {
         Log.d(TAG, "thisDate="+thisDate+",fisrt_pos="+first_pos);
         Log.d(TAG, "jumpMonth="+jumpMonth+",jumpYear="+jumpYear+",year_c="+year_c+",month_c="+month_c+",day_c="+day_c);
         calV = new CalendarGridAdapter(mContext, jumpMonth, jumpYear, year_c, month_c, day_c);
-        for (int i=first_pos; i<first_pos+7; i++) {
-            CalendarTransfer trans = calV.getCalendarList(i);
-            Log.d(TAG, "trans.solar_month="+trans.solar_month+",trans.solar_day="+trans.solar_day
-                    +",trans.lunar_month="+trans.lunar_month+",trans.lunar_day="+trans.lunar_day);
-            tranArray.add(trans);
-        }
+        //多少周
+        for (int i = first_pos; i < first_pos+7; i++) {
+                CalendarTransfer trans = calV.getCalendarList(i);
+                Log.d(TAG, "trans.solar_month=" + trans.solar_month + ",trans.solar_day=" + trans.solar_day
+                        + ",trans.lunar_month=" + trans.lunar_month + ",trans.lunar_day=" + trans.lunar_day);
+                tranArray.add(trans);
+//                if(first_pos>=7){
+//                    first_pos=0;
+//                }
+            }
+
         mView = inflater.inflate(R.layout.fragment_schedule, container, false);
         lv_shedule = (ListView) mView.findViewById(R.id.lv_shedule);
         return mView;
@@ -116,7 +121,7 @@ public class ScheduleFragment extends Fragment {
         }
         first_pos = week_count*7;
     }
-
+    //节假日
     private void checkFestival() {
         int i=0;
         for (; i<tranArray.size(); i++) {

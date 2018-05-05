@@ -46,7 +46,7 @@ public class ScheduleListAdapter extends BaseAdapter implements AdapterView.OnIt
 
     @Override
     public int getCount() {
-        return tranArray.size();
+        return 7;
     }
 
     @Override
@@ -60,7 +60,7 @@ public class ScheduleListAdapter extends BaseAdapter implements AdapterView.OnIt
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder = null;
         if (convertView == null) {
             holder = new ViewHolder();
@@ -72,7 +72,8 @@ public class ScheduleListAdapter extends BaseAdapter implements AdapterView.OnIt
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.week_number.setText(Constant.weekArray[position]);
+       holder.week_number.setText(Constant.weekArray[position]);
+        //Log.d(TAG, "position="+position);
         if (position < 5) {
             holder.week_number.setTextColor(Color.BLACK);
         } else {
